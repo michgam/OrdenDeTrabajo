@@ -13,5 +13,23 @@ namespace OrdenDeTrabajo
         {
 
         }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BoxAreaSolic_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Btn_enviar_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                Response.Write("Datos validados");
+            }
+        }
     }
 }
