@@ -78,7 +78,8 @@
         <asp:Label ID="Label4" runat="server" Text="Descripción del servicio solicitado o falla a reparar"></asp:Label>
           </p>
         
-          <textarea id="BoxDescrip" name="BoxDescrip"></textarea></p>
+          <asp:TextBox ID="TextBox1" runat="server" Height="236px" Width="627px"></asp:TextBox>
+    </p>
     <p>
 
         
