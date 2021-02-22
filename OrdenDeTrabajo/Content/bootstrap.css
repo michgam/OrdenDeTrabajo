@@ -133,6 +133,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+    margin-left: 639px;
 }
 button[disabled],
 html input[disabled] {
@@ -2347,7 +2348,7 @@ pre code {
 }
 table {
   background-color: transparent;
-    margin-left: 13px;
+    margin-left: 612px;
 }
 table col[class*="col-"] {
   position: static;
