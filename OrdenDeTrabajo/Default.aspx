@@ -6,8 +6,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    
-<body>
-  
+
     <p> </p>
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -49,7 +48,7 @@
          <asp:Label ID="Label2" runat="server" Text="Fecha de elaboración" ForeColor="#CCCCCC"></asp:Label>
          </p>
     <p> 
-        <input type="date" id="fecha" name="Fecha de elaboración" required="required">
+        <input type="date" id="fecha" name="Fecha de elaboración" required="required"/> 
         </p>
     <p>
 
@@ -82,7 +81,7 @@
         <asp:Label ID="Label4" runat="server" Text="Descripción del servicio solicitado o falla a reparar" ForeColor="#CCCCCC"></asp:Label>
           </p>
         
-          <textarea id="TextArea1" name="S1" autofocus="autofocus" required="required" spellcheck="true"></textarea></p>
+        <p> <textarea id="TextArea1" name="S1" autofocus="autofocus" required="required" spellcheck="true"></textarea></p>
     <p>
 
         
@@ -99,6 +98,8 @@
 
         
         &nbsp;</p>
-</body>
+
+
 
 </asp:Content>
+
