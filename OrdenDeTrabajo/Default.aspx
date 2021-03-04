@@ -45,7 +45,7 @@
          <asp:Label ID="Label2" runat="server" Text="Fecha de elaboración"></asp:Label>
          </p>
     <p> 
-        <input type="date" id="fecha" name="Fecha de elaboración">
+        <input type="date" id="fecha" name="Fecha de elaboración" runat="server">
         </p>
     <p>
 
@@ -78,7 +78,7 @@
         <asp:Label ID="Label4" runat="server" Text="Descripción del servicio solicitado o falla a reparar"></asp:Label>
           </p>
         
-          <textarea id="TextArea1" name="S1"></textarea></p>
+          <textarea id="TextArea1" name="S1" runat="server"></textarea></p>
     <p>
 
         
