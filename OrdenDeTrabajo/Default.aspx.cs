@@ -37,7 +37,7 @@ namespace OrdenDeTrabajo
             
             if(IsValid)
             {
-                Response.Write("Datos validos");
+                
 
                 MySqlConnection con = new MySqlConnection("server=localhost; Uid=root; Password=root; Database=helpdesk; Port=3306");
                 string sql = "Insert into glpi_tickets (name,content,itilcategories_id,date_creation) values('" + name + "','" + content + "','" + itilcategories + "','" + date_Creation + "')";
@@ -47,15 +47,18 @@ namespace OrdenDeTrabajo
                     con.Open();
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.ExecuteNonQuery();
+                    Response.Redirect("CrearPDF.aspx");
+
                 }
                 catch (Exception ex)
                 {
-                    //Mostrar mensaje en una etiqueta :)
+                    Response.Write("los datos no se han guardado"); //Mostrar mensaje en una etiqueta :)
                 }
                 finally
                 {
                     con.Close();
                 }
+
 
             }
             
