@@ -17,6 +17,7 @@
           <asp:ListItem Text="Mantenimiento de equipo" Value="2"></asp:ListItem>
             <asp:ListItem Text="Centro de Cómputo" Value="3"></asp:ListItem>
         </asp:RadioButtonList>
+    <!-- Aquí están los radio button les puse numero para que los puedas evaluar -->
      <p>        
    <asp:Label ID="Label1" runat="server" Text="Area solicitante" ForeColor="#CCCCCC"></asp:Label> 
         
