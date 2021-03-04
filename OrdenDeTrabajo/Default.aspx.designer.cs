@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace OrdenDeTrabajo
-{
-
-
-    public partial class _Default
-    {
-
+namespace OrdenDeTrabajo {
+    
+    
+    public partial class _Default {
+        
         /// <summary>
         /// Control RequiredFieldValidator4.
         /// </summary>
@@ -22,7 +20,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-
+        
         /// <summary>
         /// Control Area.
         /// </summary>
@@ -31,7 +29,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList Area;
-
+        
         /// <summary>
         /// Control Label1.
         /// </summary>
@@ -40,7 +38,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
+        
         /// <summary>
         /// Control BoxAreaSolic.
         /// </summary>
@@ -49,7 +47,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox BoxAreaSolic;
-
+        
         /// <summary>
         /// Control RequiredFieldValidator1.
         /// </summary>
@@ -58,7 +56,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
+        
         /// <summary>
         /// Control Label2.
         /// </summary>
@@ -67,7 +65,16 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-
+        
+        /// <summary>
+        /// Control fecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fecha;
+        
         /// <summary>
         /// Control Label3.
         /// </summary>
@@ -76,7 +83,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-
+        
         /// <summary>
         /// Control BoxNombre.
         /// </summary>
@@ -85,7 +92,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox BoxNombre;
-
+        
         /// <summary>
         /// Control RequiredFieldValidator3.
         /// </summary>
@@ -94,7 +101,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-
+        
         /// <summary>
         /// Control Label4.
         /// </summary>
@@ -103,7 +110,16 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-
+        
+        /// <summary>
+        /// Control TextArea1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextArea1;
+        
         /// <summary>
         /// Control Btn_enviar.
         /// </summary>

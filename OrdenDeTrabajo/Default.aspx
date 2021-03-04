@@ -48,8 +48,8 @@
          <asp:Label ID="Label2" runat="server" Text="Fecha de elaboración" ForeColor="#CCCCCC"></asp:Label>
          </p>
     <p> 
-        <input type="date" id="fecha" name="Fecha de elaboración" required="required"/> 
-        </p>
+        <input type="date" id="fecha" runat="server" name="Fecha de elaboración" required="required"/> 
+    </p>
     <p>
 
         
@@ -81,7 +81,7 @@
         <asp:Label ID="Label4" runat="server" Text="Descripción del servicio solicitado o falla a reparar" ForeColor="#CCCCCC"></asp:Label>
           </p>
         
-        <p> <textarea id="TextArea1" name="S1" autofocus="autofocus" required="required" spellcheck="true"></textarea></p>
+        <p> <textarea id="TextArea1" name="S1" runat="server" autofocus="autofocus" required="required" spellcheck="true"></textarea></p>
     <p>
 
         
