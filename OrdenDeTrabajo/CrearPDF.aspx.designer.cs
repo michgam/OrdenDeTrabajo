@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace OrdenDeTrabajo
-{
-
-
-    public partial class CrearPDF
-    {
-
+namespace OrdenDeTrabajo {
+    
+    
+    public partial class CrearPDF {
+        
         /// <summary>
         /// Control form1.
         /// </summary>
@@ -22,7 +20,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// Control Label1.
         /// </summary>
@@ -31,7 +29,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
+        
         /// <summary>
         /// Control LabelFolio.
         /// </summary>
@@ -40,7 +38,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelFolio;
-
+        
         /// <summary>
         /// Control GLPiView.
         /// </summary>
@@ -48,8 +46,8 @@ namespace OrdenDeTrabajo
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GLPiView;
-
+        protected global::System.Web.UI.WebControls.DataGrid GLPiView;
+        
         /// <summary>
         /// Control btnGenerarPDF.
         /// </summary>

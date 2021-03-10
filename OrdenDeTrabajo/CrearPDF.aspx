@@ -31,15 +31,16 @@
           <asp:Label ID="Label1" runat="server" Text="Su numero de folio es:"></asp:Label>
         <asp:Label ID="LabelFolio" runat="server" Visible="False"></asp:Label>
 
-            <asp:GridView ID="GLPiView" runat="server" AutoGenerateColumns="false" Height="251px" style="margin-left: 354px" Width="624px" >
-                <Columns>
-                  <asp:BoundField DataField="ID" HeaderText="Folio"> </asp:BoundField>
-                   <asp:BoundField DataField="name" HeaderText="Nombre"> </asp:BoundField>
-                   <asp:BoundField DataField="Descrip" HeaderText="Descripción"> </asp:BoundField>
-                   <asp:BoundFIeld DataField="area" HeaderText="Dirigido a:"> </asp:BoundFIeld>
-              </Columns>
-              </asp:GridView>  
-        <asp:Button ID="btnGenerarPDF" Text="Descargar PDF" runat="server" OnClick="btnGenerarPDF_Click" Height="109px" Width="285px" style="margin-left: 44px" />
+            <asp:DataGrid ID="GLPiView" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <ItemStyle ForeColor="#000066" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" Mode="NumericPages" />
+                <SelectedItemStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+
+            </asp:DataGrid> 
+
+        <asp:Button ID="btnGenerarPDF" Text="Actualizar tickets" runat="server" OnClick="btnGenerarPDF_Click" Height="109px" Width="285px" style="margin-left: 44px" />
 
     </form>
 
