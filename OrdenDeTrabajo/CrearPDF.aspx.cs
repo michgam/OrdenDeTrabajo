@@ -18,6 +18,12 @@ namespace OrdenDeTrabajo
 
         }
 
+        //Variables globales que almacenaran la información del ticket
+        String Folio = "";
+        String Titulo = "";
+        String Contenido = "";
+        String Area = "";
+
         protected void CargarTickets()
         {
             //CONEXIÓN
@@ -50,6 +56,49 @@ namespace OrdenDeTrabajo
         {
             //CARGA DE TICKETS
             CargarTickets();
+        }
+
+        protected void btnImprimir_Click(object sender, EventArgs e)
+        {
+            //Codigo para imprimir los tickets
+
+            //Se comprueba el contenido de almenos la primer variable
+            //Dado que al seleccionar un registro de la tabla se capturan todos los valores
+            if (Titulo != "")
+            {
+                //Aqui va todo el diseño del reporte MICH
+            }
+            else
+            {
+                //Una respuesta en la cual se menciona que se debe seleccionar
+                //Un registro de la tabla
+            }
+        }
+
+
+        //Con este metodo se capturan los datos del registro seleccionado mediante el checkbox
+        protected void chk_CheckedChanged(object sender, EventArgs e)
+        {
+            int index = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+            CheckBox ck = (CheckBox)GLPiView.Rows[index].FindControl("chk");
+
+            if (ck.Checked == true)
+            {
+                //Carga la selección a las variables globales para generar el reporte
+                Folio = GLPiView.Rows[index].Cells[1].Text;
+                Titulo = GLPiView.Rows[index].Cells[2].Text;
+                Contenido = GLPiView.Rows[index].Cells[3].Text;
+                Area = GLPiView.Rows[index].Cells[4].Text;
+            }
+            else
+            {
+                //Regresa el valor predeterminado de las variables globales
+                Folio = "";
+                Titulo = "";
+                Contenido = "";
+                Area = "";
+            }
+            
         }
     }
 }

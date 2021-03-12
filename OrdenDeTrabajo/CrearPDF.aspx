@@ -19,6 +19,12 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        #TextArea1 {
+            height: 135px;
+            width: 533px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server" enableviewstate="True" visible="True">
@@ -31,16 +37,31 @@
           <asp:Label ID="Label1" runat="server" Text="Su numero de folio es:"></asp:Label>
         <asp:Label ID="LabelFolio" runat="server" Visible="False"></asp:Label>
 
-            <asp:DataGrid ID="GLPiView" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+            <asp:GridView ID="GLPiView" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                <ItemStyle ForeColor="#000066" />
-                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" Mode="NumericPages" />
-                <SelectedItemStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+                <Columns>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:CheckBox ID="chk" runat="server" AutoPostBack="true" oncheckedchanged="chk_CheckedChanged"/>
+                                                        
+                        </ItemTemplate>
+                    </asp:TemplateField>
 
-            </asp:DataGrid> 
+
+                </Columns>
+            </asp:GridView>
 
         <asp:Button ID="btnGenerarPDF" Text="Actualizar tickets" runat="server" OnClick="btnGenerarPDF_Click" Height="109px" Width="285px" style="margin-left: 44px" />
+
+        <asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px" Text="Imprimir Ticket" />
 
     </form>
 
