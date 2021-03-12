@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using MySql.Data.MySqlClient;
 
 namespace OrdenDeTrabajo
@@ -60,13 +63,36 @@ namespace OrdenDeTrabajo
 
         protected void btnImprimir_Click(object sender, EventArgs e)
         {
+            Document doc = new Document(PageSize.LETTER);
+            //Indicamos donde vamos a guardar el documento
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"C:/prueba.pdf", FileMode.Create));
+            doc.AddTitle("Solicitud de mantenimiento");
+            doc.AddAuthor("Centro de computo");
             //Codigo para imprimir los tickets
 
             //Se comprueba el contenido de almenos la primer variable
             //Dado que al seleccionar un registro de la tabla se capturan todos los valores
-            if (Titulo != "")
+            if (Folio != "")
             {
-                //Aqui va todo el diseño del reporte MICH
+                iTextSharp.text.Font _standardFont = new iTextSharp.text.Font
+                    (iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                //encabezado 
+                doc.Add(new Paragraph("Solicitud de mantenimiento correctivo"));
+                doc.Add(Chunk.NEWLINE);
+
+                PdfPTable tblarea = new PdfPTable(2);
+                tblarea.WidthPercentage = 50;
+                PdfPCell rmsNombre = new PdfPCell(new Phrase("Recursos materiales y servicios", _standardFont));
+                rmsNombre.BorderWidth = 1;
+                rmsNombre.BorderWidthBottom = 0.75f;
+
+                PdfPCell mdeNombre = new PdfPCell(new Phrase("Mantenimiento de equipo", _standardFont));
+                rmsNombre.BorderWidth = 1;
+                rmsNombre.BorderWidthBottom = 0.75f;
+                PdfPCell ccNombre = new PdfPCell(new Phrase("Centro de cómputo", _standardFont));
+                rmsNombre.BorderWidth = 1;
+                rmsNombre.BorderWidthBottom = 0.75f;
+
             }
             else
             {
