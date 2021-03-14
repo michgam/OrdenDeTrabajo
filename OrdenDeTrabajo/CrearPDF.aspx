@@ -24,6 +24,11 @@
             height: 135px;
             width: 533px;
         }
+        #txtContenido {
+            height: 57px;
+            width: 298px;
+            margin-left: 596px;
+        }
     </style>
 </head>
 <body>
@@ -35,9 +40,9 @@
         </div>
          
           <asp:Label ID="Label1" runat="server" Text="Su numero de folio es:"></asp:Label>
-        <asp:Label ID="LabelFolio" runat="server" Visible="False"></asp:Label>
+        &nbsp;<asp:Label ID="LabelFolio" runat="server" Visible="False"></asp:Label>
 
-            <asp:GridView ID="GLPiView" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+            <asp:GridView ID="GLPiView" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="257px" style="margin-left: 6px" Width="1097px">
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -59,15 +64,30 @@
                 </Columns>
             </asp:GridView>
 
-        <asp:Button ID="btnGenerarPDF" Text="Actualizar tickets" runat="server" OnClick="btnGenerarPDF_Click" Height="109px" Width="285px" style="margin-left: 44px" />
+        <asp:Button ID="btnGenerarPDF" Text="Actualizar tickets" runat="server" OnClick="btnGenerarPDF_Click" Height="28px" Width="427px" style="margin-left: 8px" />
+
+        <br />
+        <br />
+        <br />
+            <asp:TextBox ID="txtFolio" runat="server" style="margin-left: 597px" Width="298px"></asp:TextBox>
+            <asp:TextBox ID="txtNombre" runat="server" style="margin-left: 596px" Width="298px"></asp:TextBox>
+            <asp:TextBox ID="txtArea" runat="server" style="margin-left: 595px" Width="298px"></asp:TextBox>
+            <textarea id="txtContenido" runat="server" name="S1"></textarea><asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px; margin-left: 800px;" Text="Imprimir Ticket" />
+            <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
         <div>
         
         
-        <asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px" Text="Imprimir Ticket" />
-            <asp:TextBox ID="txtFolio" runat="server"></asp:TextBox>
-            <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
-            <textarea id="txtContenido" runat="server" cols="20" name="S1" rows="2"></textarea><asp:TextBox ID="txtArea" runat="server"></asp:TextBox>
         </div>
     </form>
 

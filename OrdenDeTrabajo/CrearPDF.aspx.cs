@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using iTextSharp.text;
@@ -66,11 +67,15 @@ namespace OrdenDeTrabajo
             else
             {
                 String fecha = DateTime.Now.ToString("ddmmyyyyss");
+             
                 Document doc = new Document(PageSize.A4);
+                
                 //Indicamos donde vamos a guardar el documento
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"C:/PDF/" + fecha + "prueba.pdf", FileMode.Create));
-
-                //Comentario para probar la actualización
+                PdfWriter writer = PdfWriter.GetInstance(doc, HttpContext.Current.Response.OutputStream);
+                
+               
+               
+                
 
 
                 //Se comprueba el contenido de almenos la primer variable
@@ -102,7 +107,17 @@ namespace OrdenDeTrabajo
 
                 doc.Close();
 
+                //Se genere nuestro archivo para descargar
                 Response.Write("<script>alert('Ticket generado correctamente')</script>");
+
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("contest-disposition", "attachment;filename="+fecha+"reporte.pdf");
+                HttpContext.Current.Response.Write(doc);
+                Response.Flush();
+                Response.End();
+
+              
+
             }
 
             
