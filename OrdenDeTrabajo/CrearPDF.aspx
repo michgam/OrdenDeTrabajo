@@ -61,8 +61,14 @@
 
         <asp:Button ID="btnGenerarPDF" Text="Actualizar tickets" runat="server" OnClick="btnGenerarPDF_Click" Height="109px" Width="285px" style="margin-left: 44px" />
 
+        <div>
+        
+        
         <asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px" Text="Imprimir Ticket" />
-
+            <asp:TextBox ID="txtFolio" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+            <textarea id="txtContenido" runat="server" cols="20" name="S1" rows="2"></textarea><asp:TextBox ID="txtArea" runat="server"></asp:TextBox>
+        </div>
     </form>
 
 </body>
