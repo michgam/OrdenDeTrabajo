@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using MySql.Data.MySqlClient;
+using Image = iTextSharp.text.Image;
 
 namespace OrdenDeTrabajo
 {
@@ -90,7 +91,9 @@ namespace OrdenDeTrabajo
                 iTextSharp.text.Font normal12 = new iTextSharp.text.Font(bfTimes, 12f, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
                 iTextSharp.text.Font negrita12 = new iTextSharp.text.Font(bfTimes, 12f, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
                 // se pone la imagen 
-                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance("/Content/Images/logo.png");
+                //image 
+                string pathImage = Server.MapPath("/Content/Images/logo.png");
+                Image logo = Image.GetInstance(pathImage);
                 logo.ScalePercent(15f);
                 //encabezado 
                 var table = new PdfPTable(new float[] { 40f, 60f }) { WidthPercentage = 100f};
@@ -100,6 +103,9 @@ namespace OrdenDeTrabajo
                 c1.Border = 0;
                 table.AddCell(cellimage);
                 table.AddCell(c1);
+
+                
+
 
                 //Llenado de tabla 
 

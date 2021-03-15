@@ -31,10 +31,10 @@
         }
     </style>
 </head>
-<body>
+<body bgcolor="">
     <form id="form1" runat="server" enableviewstate="True" visible="True">
         <div>
-            <h1> SU PETICIÓN HA SIDO ENVIADA CORRECTAMENTE</h1>
+            <h1 > SU SOLICITUD HA SIDO ENVIADA CORRECTAMENTE</h1>
             <h2>SE DARÁ SEGUIMIENTO A SU PETICIÓN
             </h2>
         </div>
