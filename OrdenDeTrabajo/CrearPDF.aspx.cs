@@ -67,15 +67,13 @@ namespace OrdenDeTrabajo
             else
             {
                 String fecha = DateTime.Now.ToString("ddmmyyyyss");
-             
+
                 Document doc = new Document(PageSize.A4);
-                
+
                 //Indicamos donde vamos a guardar el documento
                 PdfWriter writer = PdfWriter.GetInstance(doc, HttpContext.Current.Response.OutputStream);
-                
-               
-               
-                
+
+
 
 
                 //Se comprueba el contenido de almenos la primer variable
@@ -85,25 +83,52 @@ namespace OrdenDeTrabajo
                 doc.AddTitle("Solicitud de mantenimiento");
                 doc.AddAuthor("Centro de computo");
                 //Codigo para imprimir los tickets
-                iTextSharp.text.Font _standardFont = new iTextSharp.text.Font
-                    (iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                //Se pone las fuentes
+                BaseFont bfTimes = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
+                //Aquí se puede cambiar el tamaño y estilo de la fuente
+                iTextSharp.text.Font negrita18 = new iTextSharp.text.Font(bfTimes, 18f, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
+                iTextSharp.text.Font normal12 = new iTextSharp.text.Font(bfTimes, 12f, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                iTextSharp.text.Font negrita12 = new iTextSharp.text.Font(bfTimes, 12f, iTextSharp.text.Font.BOLD, BaseColor.BLACK);
+                // se pone la imagen 
+                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance("/Content/Images/logo.png");
+                logo.ScalePercent(15f);
                 //encabezado 
-                var tblarea = new PdfPTable(2)
-                {
-                    WidthPercentage = 75,
-                    DefaultCell = { MinimumHeight = 22f }
-                };
+                var table = new PdfPTable(new float[] { 40f, 60f }) { WidthPercentage = 100f};
+                var cellimage = new PdfPCell(logo);
+                var c1 = new PdfPCell(new Phrase("SOLICITUD MANTENIMIENTO CORRECTIVO"));
+                cellimage.Border = 0;
+                c1.Border = 0;
+                table.AddCell(cellimage);
+                table.AddCell(c1);
 
-                tblarea.AddCell("Folio");
-                tblarea.AddCell(txtFolio.Text);
-                tblarea.AddCell("Titulo");
-                tblarea.AddCell(txtNombre.Text);
-                tblarea.AddCell("Contenido");
-                tblarea.AddCell(txtContenido.Value);
-                tblarea.AddCell("Area");
-                tblarea.AddCell(txtArea.Text);
+                //Llenado de tabla 
 
-                doc.Add(tblarea);
+                var table2 = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f };
+
+                var celda1 = new PdfPCell(new Paragraph("Area a la que va dirigida: "+txtArea.Text,negrita12));
+                var celda2 = new PdfPCell(new Paragraph("Folio: "+txtFolio.Text, negrita12));
+
+                var celda3 = new PdfPCell(new Paragraph("Nombre y firma de(l)/la solicitante:",negrita12));
+                var celda4 = new PdfPCell(new Paragraph("",normal12));
+
+                //FALTÓ FECHA DE ELABORACIÓN
+                var celda5 = new PdfPCell(new Paragraph("Fecha de elaboración:"+ negrita12));
+                var celda6 = new PdfPCell(new Paragraph("Descripción del servicio o falla a reparar: " + txtNombre.Text, negrita12));
+
+                var celda7 = new PdfPCell(new Paragraph(txtContenido.Value,negrita12));
+
+                table2.AddCell(celda1);
+                table2.AddCell(celda2);
+                table2.AddCell(celda3);
+                table2.AddCell(celda4);
+                table2.AddCell(celda5);
+                table2.AddCell(celda5);
+                table2.AddCell(celda7);
+
+
+
+
+                doc.Add(table);
 
                 doc.Close();
 

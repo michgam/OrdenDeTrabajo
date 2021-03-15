@@ -27,7 +27,7 @@
         #txtContenido {
             height: 57px;
             width: 298px;
-            margin-left: 596px;
+            margin-left: 13px;
         }
     </style>
 </head>
@@ -69,10 +69,16 @@
         <br />
         <br />
         <br />
-            <asp:TextBox ID="txtFolio" runat="server" style="margin-left: 597px" Width="298px"></asp:TextBox>
-            <asp:TextBox ID="txtNombre" runat="server" style="margin-left: 596px" Width="298px"></asp:TextBox>
-            <asp:TextBox ID="txtArea" runat="server" style="margin-left: 595px" Width="298px"></asp:TextBox>
-            <textarea id="txtContenido" runat="server" name="S1"></textarea><asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px; margin-left: 800px;" Text="Imprimir Ticket" />
+            <asp:TextBox ID="txtFolio" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
+            <br />
+        <br />
+            <asp:TextBox ID="txtNombre" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
+            <br />
+        <br />
+        <asp:TextBox ID="txtArea" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
+        <br />
+        <br />
+            <textarea id="txtContenido" runat="server" name="S1"></textarea><asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px; margin-left: 17px;" Text="Imprimir Ticket" />
             <br />
         <br />
         <br />
