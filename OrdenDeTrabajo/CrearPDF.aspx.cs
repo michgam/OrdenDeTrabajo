@@ -98,7 +98,7 @@ namespace OrdenDeTrabajo
                 //encabezado 
                 var table = new PdfPTable(new float[] { 40f, 60f }) { WidthPercentage = 100f };
                 var cellimage = new PdfPCell(logo);
-                var c1 = new PdfPCell(new Phrase("SOLICITUD MANTENIMIENTO CORRECTIVO"));
+                var c1 = new PdfPCell(new Phrase("SOLICITUD MANTENIMIENTO CORRECTIVO",negrita18));
                 cellimage.Border = 0;
                 c1.Border = 0;
                 table.AddCell(cellimage);
