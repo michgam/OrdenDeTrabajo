@@ -115,6 +115,8 @@ namespace OrdenDeTrabajo
                 var celda2 = new PdfPCell(new Paragraph("Folio: " + txtFolio.Text, negrita12));
                 //celda agregada
                 var celda8 = new PdfPCell(new Paragraph("Area solicitante: ", negrita12));
+                var celda9 = new PdfPCell(new Paragraph("", negrita12));
+
 
                 var celda3 = new PdfPCell(new Paragraph("Nombre y firma de(l)/la solicitante:", negrita12));
                 var celda4 = new PdfPCell(new Paragraph("", normal12));
@@ -128,6 +130,7 @@ namespace OrdenDeTrabajo
                 table2.AddCell(celda1);
                 table2.AddCell(celda2);
                 table2.AddCell(celda8);
+                table2.AddCell(celda9);
                 table2.AddCell(celda3);
                 table2.AddCell(celda4);
                 table2.AddCell(celda5);
