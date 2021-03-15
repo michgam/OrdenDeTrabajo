@@ -39,10 +39,7 @@
             </h2>
         </div>
          
-          <asp:Label ID="Label1" runat="server" Text="Su numero de folio es:"></asp:Label>
-        &nbsp;<asp:Label ID="LabelFolio" runat="server" Visible="False"></asp:Label>
-
-            <asp:GridView ID="GLPiView" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="257px" style="margin-left: 6px" Width="1097px">
+        &nbsp;<asp:GridView ID="GLPiView" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="257px" style="margin-left: 6px" Width="1097px">
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -78,7 +75,12 @@
         <asp:TextBox ID="txtArea" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
         <br />
         <br />
-            <textarea id="txtContenido" runat="server" name="S1"></textarea><asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px; margin-left: 17px;" Text="Imprimir Ticket" />
+        <asp:TextBox ID="txtFecha" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
+        <br />
+        <br />
+            <textarea id="txtContenido" runat="server" name="S1">          
+            </textarea>
+        <asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px; margin-left: 17px;" Text="Imprimir Ticket" />
             <br />
         <br />
         <br />

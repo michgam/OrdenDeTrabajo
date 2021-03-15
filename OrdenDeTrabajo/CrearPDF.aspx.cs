@@ -29,7 +29,7 @@ namespace OrdenDeTrabajo
         {
             //CONEXIÓN
             MySqlConnection con = new MySqlConnection("server=localhost; Uid=root; Password=root; Database=helpdesk; Port=3306");
-            string sql = "Select glpi_tickets.id as Folio, glpi_tickets.name as Nombre, glpi_tickets.content as Contenido, glpi_itilcategories.name as Area from glpi_tickets, glpi_itilcategories where glpi_tickets.itilcategories_id = glpi_itilcategories.id;";
+            string sql = "Select glpi_tickets.id as Folio, glpi_tickets.name as Nombre, glpi_tickets.content as Contenido, glpi_tickets.date_creation as Fecha_Creacion, glpi_itilcategories.name as Area from glpi_tickets, glpi_itilcategories where glpi_tickets.itilcategories_id = glpi_itilcategories.id;";
 
             try
             {
@@ -166,9 +166,10 @@ namespace OrdenDeTrabajo
             {
                 //Carga la selección a los inputs para generar el reporte
                 txtFolio.Text = GLPiView.Rows[index].Cells[1].Text;
-                txtNombre.Text = GLPiView.Rows[index].Cells[2].Text;
+                txtNombre.Text = GLPiView.Rows[index].Cells[2].Text;                
                 txtContenido.Value = GLPiView.Rows[index].Cells[3].Text;
-                txtArea.Text = GLPiView.Rows[index].Cells[4].Text;
+                txtFecha.Text = GLPiView.Rows[index].Cells[4].Text;
+                txtArea.Text = GLPiView.Rows[index].Cells[5].Text;
             }
             else
             {
@@ -176,6 +177,7 @@ namespace OrdenDeTrabajo
                 txtFolio.Text = "";
                 txtNombre.Text = "";
                 txtContenido.Value = "";
+                txtFecha.Text =  "";
                 txtArea.Text = "";
             }
             
