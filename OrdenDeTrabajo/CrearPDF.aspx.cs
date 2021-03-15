@@ -94,9 +94,9 @@ namespace OrdenDeTrabajo
                 //image 
                 string pathImage = Server.MapPath("/Content/Images/logo.png");
                 Image logo = Image.GetInstance(pathImage);
-                logo.ScalePercent(15f);
+                logo.ScalePercent(8f);
                 //encabezado 
-                var table = new PdfPTable(new float[] { 40f, 60f }) { WidthPercentage = 100f};
+                var table = new PdfPTable(new float[] { 40f, 60f }) { WidthPercentage = 100f };
                 var cellimage = new PdfPCell(logo);
                 var c1 = new PdfPCell(new Phrase("SOLICITUD MANTENIMIENTO CORRECTIVO"));
                 cellimage.Border = 0;
@@ -104,24 +104,24 @@ namespace OrdenDeTrabajo
                 table.AddCell(cellimage);
                 table.AddCell(c1);
 
-                
+
 
 
                 //Llenado de tabla 
 
                 var table2 = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f };
 
-                var celda1 = new PdfPCell(new Paragraph("Area a la que va dirigida: "+txtArea.Text,negrita12));
-                var celda2 = new PdfPCell(new Paragraph("Folio: "+txtFolio.Text, negrita12));
+                var celda1 = new PdfPCell(new Paragraph("Area a la que va dirigida: " + txtArea.Text, negrita12));
+                var celda2 = new PdfPCell(new Paragraph("Folio: " + txtFolio.Text, negrita12));
 
-                var celda3 = new PdfPCell(new Paragraph("Nombre y firma de(l)/la solicitante:",negrita12));
-                var celda4 = new PdfPCell(new Paragraph("",normal12));
+                var celda3 = new PdfPCell(new Paragraph("Nombre y firma de(l)/la solicitante:", negrita12));
+                var celda4 = new PdfPCell(new Paragraph("", normal12));
 
                 //FALTÓ FECHA DE ELABORACIÓN
-                var celda5 = new PdfPCell(new Paragraph("Fecha de elaboración:"+ negrita12));
+                var celda5 = new PdfPCell(new Paragraph("Fecha de elaboración:" + negrita12));
                 var celda6 = new PdfPCell(new Paragraph("Descripción del servicio o falla a reparar: " + txtNombre.Text, negrita12));
 
-                var celda7 = new PdfPCell(new Paragraph(txtContenido.Value,negrita12));
+                var celda7 = new PdfPCell(new Paragraph(txtContenido.Value, negrita12));
 
                 table2.AddCell(celda1);
                 table2.AddCell(celda2);
@@ -135,6 +135,7 @@ namespace OrdenDeTrabajo
 
 
                 doc.Add(table);
+                doc.Add(table2);
 
                 doc.Close();
 
