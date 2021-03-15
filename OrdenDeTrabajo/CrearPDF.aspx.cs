@@ -118,7 +118,7 @@ namespace OrdenDeTrabajo
                 var celda4 = new PdfPCell(new Paragraph("", normal12));
 
                 //FALTÓ FECHA DE ELABORACIÓN
-                var celda5 = new PdfPCell(new Paragraph("Fecha de elaboración:" + negrita12));
+                var celda5 = new PdfPCell(new Paragraph("Fecha de elaboración:" + txtFecha.Text, negrita12));
                 var celda6 = new PdfPCell(new Paragraph("Descripción del servicio o falla a reparar: " + txtNombre.Text, negrita12));
 
                 var celda7 = new PdfPCell(new Paragraph(txtContenido.Value, negrita12));
