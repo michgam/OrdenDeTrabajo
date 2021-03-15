@@ -31,7 +31,7 @@
         }
     </style>
 </head>
-<body bgcolor="">
+<body>
     <form id="form1" runat="server" enableviewstate="True" visible="True">
         <div>
             <h1 > SU SOLICITUD HA SIDO ENVIADA CORRECTAMENTE</h1>
