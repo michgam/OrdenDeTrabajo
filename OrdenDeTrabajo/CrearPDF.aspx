@@ -34,12 +34,12 @@
 <body>
     <form id="form1" runat="server" enableviewstate="True" visible="True">
         <div>
-            <h1 > SU SOLICITUD HA SIDO ENVIADA CORRECTAMENTE</h1>
-            <h2>SE DARÁ SEGUIMIENTO A SU PETICIÓN
-            </h2>
+            <asp:Label ID="Label1" runat="server" Text="SU SOLICITUD HA SIDO ALMACENADA CORRECTAMENTE" BackColor="#33CC33" Font-Bold="True" Font-Names="Bahnschrift SemiBold" Font-Size="25pt" ForeColor="White"></asp:Label>
+            <br />
         </div>
          
-        &nbsp;<asp:GridView ID="GLPiView" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="257px" style="margin-left: 6px" Width="1097px">
+        &nbsp;<asp:Label ID="Label2" runat="server" Text="Por favor selecciones su ticket a imprimir" Font-Bold="true" Font-Names="Bahnschrift SemiBold" Font-Size="20pt"></asp:Label>
+        <asp:GridView ID="GLPiView" runat="server" BackColor="#66CCFF" BorderColor="#666699" BorderStyle="None" BorderWidth="10px" CellPadding="3" Height="257px" style="margin-left: 6px" Width="1097px" Font-Names="Arial">
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -61,26 +61,31 @@
                 </Columns>
             </asp:GridView>
 
-        <asp:Button ID="btnGenerarPDF" Text="Actualizar tickets" runat="server" OnClick="btnGenerarPDF_Click" Height="28px" Width="427px" style="margin-left: 8px" />
+        <br />
+
+        <asp:Button ID="btnGenerarPDF" Text="Actualizar tickets" runat="server" OnClick="btnGenerarPDF_Click" Height="56px" Width="427px" style="margin-left: 8px" BackColor="#FF9933" Font-Bold="True" Font-Names="Arial" Font-Size="12pt" />
 
         <br />
         <br />
         <br />
-            <asp:TextBox ID="txtFolio" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+            <asp:TextBox ID="txtFolio" runat="server" style="margin-left: 17px" Width="298px" BorderColor="Black" BorderWidth="7px" ReadOnly="True"></asp:TextBox>
             <br />
         <br />
-            <asp:TextBox ID="txtNombre" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
+            <asp:TextBox ID="txtNombre" runat="server" style="margin-left: 17px" Width="298px" BorderWidth="7px" ReadOnly="True"></asp:TextBox>
             <br />
         <br />
-        <asp:TextBox ID="txtArea" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
+        <asp:TextBox ID="txtArea" runat="server" style="margin-left: 17px" Width="298px" BorderWidth="7px" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
-        <asp:TextBox ID="txtFecha" runat="server" style="margin-left: 17px" Width="298px"></asp:TextBox>
+        <asp:TextBox ID="txtFecha" runat="server" style="margin-left: 17px" Width="298px" BorderWidth="7px" ReadOnly="True"></asp:TextBox>
         <br />
         <br />
-            <textarea id="txtContenido" runat="server" name="S1">          
+            <textarea id="txtContenido" runat="server" name="S1" aria-readonly="True" readonly="readonly" >          
             </textarea>
-        <asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px; margin-left: 17px;" Text="Imprimir Ticket" />
+        <asp:Button ID="btnImprimir" runat="server" OnClick="btnImprimir_Click" style="margin-right: 0px; margin-left: 17px;" Text="Imprimir Ticket" BackColor="#FF9933" Font-Bold="True" Font-Names="Arial" Font-Size="12pt" Height="85px" Width="257px" />
             <br />
         <br />
         <br />
