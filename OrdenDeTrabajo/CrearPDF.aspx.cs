@@ -96,14 +96,73 @@ namespace OrdenDeTrabajo
                 Image logo = Image.GetInstance(pathImage);
                 logo.ScalePercent(8f);
                 //encabezado 
-                var table = new PdfPTable(new float[] { 40f, 60f }) { WidthPercentage = 100f };
-                var cellimage = new PdfPCell(logo);
-                var c1 = new PdfPCell(new Phrase("SOLICITUD MANTENIMIENTO CORRECTIVO",negrita18));
-                cellimage.Border = 0;
-                c1.Border = 0;
-                table.AddCell(cellimage);
-                table.AddCell(c1);
 
+
+                //Encabezado del documento
+                var encabezado = new PdfPTable(new float[] { 20f, 40f, 40f }) {WidthPercentage = 100 };
+                encabezado.AddCell(new PdfPCell(new Phrase(" ")) { Rowspan = 4});
+                encabezado.AddCell(new PdfPCell(new Phrase("Solicitud de Mantenimiento Correctivo")) {HorizontalAlignment = Element.ALIGN_LEFT , Rowspan = 2});                
+                encabezado.AddCell(new PdfPCell(new Phrase("Version 0")) {HorizontalAlignment = Element.ALIGN_JUSTIFIED , Rowspan = 3});
+                encabezado.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthBottom = 0, BorderWidthTop = 0});               
+                encabezado.AddCell(new PdfPCell(new Phrase("Referencia a la norma ISO 9001:2015 7.1.3, 7.1.4")) { HorizontalAlignment = Element.ALIGN_LEFT, BorderWidthTop = 0});
+                encabezado.AddCell(new PdfPCell(new Phrase("Pagina 1 de 2")) { HorizontalAlignment = Element.ALIGN_LEFT });
+
+                doc.Add(encabezado);
+
+                //Tabla para generar espacio
+                var espacio1 = new PdfPTable(new float[] {100f});
+                espacio1.AddCell(new PdfPCell(new Phrase(" ")) {Border = 0 });
+                doc.Add(espacio1);
+
+                //Tabla de contenido del ticket
+                var table = new PdfPTable(new float[] { 100f });
+                table.AddCell(new PdfPCell(new Phrase("SOLICITUD MANTENIMIENTO CORRECTIVO", negrita18)) { HorizontalAlignment = Element.ALIGN_CENTER, Border = 0 });
+                doc.Add(table);
+
+                //Más espacio
+                var espacio2 = new PdfPTable(new float[] { 100f });
+                espacio2.AddCell(new PdfPCell(new Phrase(" ")) { Border = 0 });               
+                doc.Add(espacio2);
+
+                //Tabla folio y area
+                var tblFolioArea = new PdfPTable(new float[] {30f,10f,60f }) { WidthPercentage = 100f};
+                tblFolioArea.AddCell(new PdfPCell(new Phrase(" ")) {Border = 0 });
+                tblFolioArea.AddCell(new PdfPCell(new Phrase("Folio: " + txtFolio.Text, negrita12)) {HorizontalAlignment = Element.ALIGN_CENTER  });
+                tblFolioArea.AddCell(new PdfPCell(new Phrase("Dirigido al area: " + txtArea.Text, negrita12)) {HorizontalAlignment = Element.ALIGN_CENTER  });
+                doc.Add(tblFolioArea);
+
+                //Más espacio
+                var espacio4 = new PdfPTable(new float[] { 100f });
+                espacio4.AddCell(new PdfPCell(new Phrase(" ")) { Border = 0 });
+                espacio4.AddCell(new PdfPCell(new Phrase(" ")) { Border = 0 });
+                doc.Add(espacio4);
+
+
+                //Area Solicitante
+                var tblArea = new PdfPTable(new float[] { 20f, 80f }) { WidthPercentage = 100f};
+                tblArea.AddCell(new PdfPCell(new Phrase("Area solicitante: ", negrita12)) { HorizontalAlignment = Element.ALIGN_CENTER, Rowspan = 2 , BorderWidthRight = 0});
+                tblArea.AddCell(new PdfPCell(new Phrase(" ")) {BorderWidthBottom = 0, BorderWidthLeft = 0});
+                tblArea.AddCell(new PdfPCell(new Phrase(" ")) {BorderWidthTop = 0, BorderWidthLeft = 0 });
+                doc.Add(tblArea);
+
+                //Mas espacio
+                var espacio3 = new PdfPTable(new float[] { 100f });
+                espacio3.AddCell(new PdfPCell(new Phrase(" ")) { Border = 0 });
+                doc.Add(espacio3);
+
+                //Nombre y firma del solicitante
+                var tblNombre = new PdfPTable(new float[] { 40f, 60f }) { WidthPercentage = 100f };
+                tblNombre.AddCell(new PdfPCell(new Phrase("Nombre y firma de(l)/la solicitante: ", negrita12)) { HorizontalAlignment = Element.ALIGN_BOTTOM, Rowspan = 2, BorderWidthRight = 0});
+                tblNombre.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthBottom = 0, BorderWidthLeft = 0 });
+                tblNombre.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthTop = 0, BorderWidthLeft = 0 });
+                doc.Add(tblNombre);
+
+                //Fecha de elaboración
+                var tblFecha = new PdfPTable(new float[] { 95f, 5f }) { WidthPercentage = 100f };
+                tblFecha.AddCell(new PdfPCell(new Phrase("Fecha de elaboración:  " + txtFecha.Text, negrita12)) { HorizontalAlignment = Element.ALIGN_LEFT, Rowspan = 2, BorderWidthRight = 0, BorderWidthTop = 0});
+                tblFecha.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthBottom = 0, BorderWidthLeft = 0, BorderWidthTop = 0});
+                tblFecha.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthTop = 0, BorderWidthLeft = 0 });
+                doc.Add(tblFecha);
 
 
 
@@ -111,37 +170,38 @@ namespace OrdenDeTrabajo
 
                 var table2 = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f };
 
-                var celda1 = new PdfPCell(new Paragraph("Area a la que va dirigida: " + txtArea.Text, negrita12));
-                var celda2 = new PdfPCell(new Paragraph("Folio: " + txtFolio.Text, negrita12));
-                //celda agregada
-                var celda8 = new PdfPCell(new Paragraph("Area solicitante: ", negrita12));
-                var celda9 = new PdfPCell(new Paragraph("", negrita12));
+                var celda6 = new PdfPCell(new Paragraph("Título del ticket: " + txtNombre.Text, negrita12));
 
-
-                var celda3 = new PdfPCell(new Paragraph("Nombre y firma de(l)/la solicitante:", negrita12));
-                var celda4 = new PdfPCell(new Paragraph("", normal12));
-
-                //FALTÓ FECHA DE ELABORACIÓN
-                var celda5 = new PdfPCell(new Paragraph("Fecha de elaboración:" + txtFecha.Text, negrita12));
-                var celda6 = new PdfPCell(new Paragraph("Descripción del servicio o falla a reparar: " + txtNombre.Text, negrita12));
-
-                var celda7 = new PdfPCell(new Paragraph(txtContenido.Value, negrita12));
-
-                table2.AddCell(celda1);
-                table2.AddCell(celda2);
-                table2.AddCell(celda8);
-                table2.AddCell(celda9);
-                table2.AddCell(celda3);
-                table2.AddCell(celda4);
-                table2.AddCell(celda5);
+                var celda7 = new PdfPCell(new Paragraph("Descripción del servicio solicitado o falla a reparar: ", negrita12));
+              
+                
                 table2.AddCell(celda6);
                 table2.AddCell(celda7);
-
-                //Cambio jajajja
-
-
-                doc.Add(table);
+                //Cambio jajajja                                         
                 doc.Add(table2);
+
+
+                //Contenido
+                var tblContenido = new PdfPTable(new float[] { 95f, 5f }) { WidthPercentage = 100f};
+                tblContenido.AddCell(new PdfPCell(new Phrase(txtContenido.Value, negrita12)) { BorderWidthRight = 0, HorizontalAlignment = Element.ALIGN_JUSTIFIED, Rowspan = 10 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) {BorderWidthLeft = 0, BorderWidthBottom = 0 }); 
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthTop = 0 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthTop = 0 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthTop = 0 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthTop = 0 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthTop = 0 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthTop = 0 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthTop = 0 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthTop = 0 });
+                tblContenido.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthLeft = 0, BorderWidthTop = 0 });
+
+                doc.Add(tblContenido);
+
+
+                //Responsal
+                var responsal = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f};
+                responsal.AddCell(new PdfPCell(new Phrase("c.c.p Área solicitante", negrita12)) { HorizontalAlignment = Element.ALIGN_LEFT, Border = 0 });
+                doc.Add(responsal);
 
                 doc.Close();
 
