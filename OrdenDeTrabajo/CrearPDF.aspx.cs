@@ -205,6 +205,8 @@ namespace OrdenDeTrabajo
 
                 doc.Close();
 
+                //Hey
+
                 //Se genere nuestro archivo para descargar
                 Response.Write("<script>alert('Ticket generado correctamente')</script>");
 
