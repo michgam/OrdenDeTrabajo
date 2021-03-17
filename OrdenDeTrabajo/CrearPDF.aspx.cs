@@ -105,7 +105,7 @@ namespace OrdenDeTrabajo
                 encabezado.AddCell(new PdfPCell(new Phrase("Version 0")) {HorizontalAlignment = Element.ALIGN_JUSTIFIED , Rowspan = 3});
                 encabezado.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthBottom = 0, BorderWidthTop = 0});               
                 encabezado.AddCell(new PdfPCell(new Phrase("Referencia a la norma ISO 9001:2015 7.1.3, 7.1.4")) { HorizontalAlignment = Element.ALIGN_LEFT, BorderWidthTop = 0});
-                encabezado.AddCell(new PdfPCell(new Phrase("Pagina 1 de 2")) { HorizontalAlignment = Element.ALIGN_LEFT });
+                encabezado.AddCell(new PdfPCell(new Phrase("Pagina 1 de 1")) { HorizontalAlignment = Element.ALIGN_LEFT });
 
                 doc.Add(encabezado);
 
