@@ -74,7 +74,7 @@
             <asp:TextBox ID="txtFolio" runat="server" style="margin-left: 17px" Width="298px" BorderColor="Black" BorderWidth="7px" ReadOnly="True"></asp:TextBox>
             <br />
         <br />
-            <asp:TextBox ID="txtNombre" runat="server" style="margin-left: 17px" Width="298px" BorderWidth="7px" ReadOnly="True"></asp:TextBox>
+            <asp:TextBox ID="txtNombre" runat="server" style="margin-left: 17px" Width="298px" BorderWidth="7px" ></asp:TextBox>
             <br />
         <br />
         <asp:TextBox ID="txtArea" runat="server" style="margin-left: 17px" Width="298px" BorderWidth="7px" ReadOnly="True"></asp:TextBox>

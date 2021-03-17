@@ -53,7 +53,7 @@ namespace OrdenDeTrabajo
                 }
                 catch (Exception ex)
                 {
-                    Response.Write("los datos no se han guardado "); //Mostrar mensaje en una etiqueta :)
+                    Response.Write("los datos no se han guardado " + ex); //Mostrar mensaje en una etiqueta :)
                 }
                 finally
                 {

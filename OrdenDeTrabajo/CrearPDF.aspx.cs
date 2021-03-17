@@ -94,24 +94,23 @@ namespace OrdenDeTrabajo
                 //image 
                 string pathImage = Server.MapPath("/Content/Images/logo.png");
                 Image logo = Image.GetInstance(pathImage);
-                logo.ScalePercent(5f);
+                logo.ScalePercent(3.60f);
+                
                 //encabezado 
 
 
                 //Encabezado del documento
                 var encabezado = new PdfPTable(new float[] { 20f, 40f, 40f }) {WidthPercentage = 100 };
                 //logo cambio hecho
-                encabezado.AddCell(new PdfPCell(new Phrase(" ")) { Rowspan = 4});
+                encabezado.AddCell(new PdfPCell(logo) { Rowspan = 4, HorizontalAlignment = Element.ALIGN_CENTER});
                 encabezado.AddCell(new PdfPCell(new Phrase("Solicitud de Mantenimiento Correctivo")) {HorizontalAlignment = Element.ALIGN_LEFT , Rowspan = 2});                
                 encabezado.AddCell(new PdfPCell(new Phrase("Version 0")) {HorizontalAlignment = Element.ALIGN_JUSTIFIED , Rowspan = 3});
                 encabezado.AddCell(new PdfPCell(new Phrase(" ")) { BorderWidthBottom = 0, BorderWidthTop = 0});               
                 encabezado.AddCell(new PdfPCell(new Phrase("Referencia a la norma ISO 9001:2015 7.1.3, 7.1.4")) { HorizontalAlignment = Element.ALIGN_LEFT, BorderWidthTop = 0});
-<<<<<<< HEAD
-               
-=======
+
                 encabezado.AddCell(new PdfPCell(new Phrase("Pagina 1 de 1")) { HorizontalAlignment = Element.ALIGN_LEFT });
 
->>>>>>> 14c5d3c83c1cd51f6b3422cc433181fb66f61139
+
                 doc.Add(encabezado);
 
                 //CAmbio

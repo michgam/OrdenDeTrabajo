@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace OrdenDeTrabajo
-{
-
-
-    public partial class CrearPDF
-    {
-
+namespace OrdenDeTrabajo {
+    
+    
+    public partial class CrearPDF {
+        
         /// <summary>
         /// Control form1.
         /// </summary>
@@ -22,7 +20,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// Control Label1.
         /// </summary>
@@ -31,7 +29,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
+        
         /// <summary>
         /// Control Label2.
         /// </summary>
@@ -40,7 +38,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-
+        
         /// <summary>
         /// Control GLPiView.
         /// </summary>
@@ -49,7 +47,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GLPiView;
-
+        
         /// <summary>
         /// Control btnGenerarPDF.
         /// </summary>
@@ -58,7 +56,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGenerarPDF;
-
+        
         /// <summary>
         /// Control txtFolio.
         /// </summary>
@@ -67,7 +65,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFolio;
-
+        
         /// <summary>
         /// Control txtNombre.
         /// </summary>
@@ -76,7 +74,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
-
+        
         /// <summary>
         /// Control txtArea.
         /// </summary>
@@ -85,7 +83,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtArea;
-
+        
         /// <summary>
         /// Control txtFecha.
         /// </summary>
@@ -94,7 +92,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFecha;
-
+        
         /// <summary>
         /// Control txtContenido.
         /// </summary>
@@ -103,7 +101,7 @@ namespace OrdenDeTrabajo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtContenido;
-
+        
         /// <summary>
         /// Control btnImprimir.
         /// </summary>
