@@ -26,14 +26,14 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="Area" ErrorMessage="*Debe seleccionar una opción" Font-Names="Bahnschrift Light" ForeColor="White"></asp:RequiredFieldValidator>
     
-    <asp:RadioButtonList ID="Area" runat="server"  Width="498px" ForeColor="#CCCCCC" style="margin-left: 721px" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="Large" >
+    <asp:RadioButtonList ID="Area" runat="server"  Width="498px" ForeColor="#CCCCCC" style="margin-left: 721px" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="15pt" >
            <asp:ListItem Text="Recursos materiales y servicios" Value="1"></asp:ListItem>
           <asp:ListItem Text="Mantenimiento de equipo" Value="2"></asp:ListItem>
             <asp:ListItem Text="Centro de Cómputo" Value="3"></asp:ListItem>
         </asp:RadioButtonList>
     <!-- Aquí están los radio button les puse numero para que los puedas evaluar -->
      <p>        
-   <asp:Label ID="Label1" runat="server" Text="Area solicitante" ForeColor="#CCCCCC" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="Large"></asp:Label> 
+   <asp:Label ID="Label1" runat="server" Text="Area solicitante" ForeColor="#CCCCCC" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="15pt"></asp:Label> 
         
     </p>
     <p>
@@ -60,7 +60,7 @@
      <p>
 
         
-         <asp:Label ID="Label2" runat="server" Text="Fecha de elaboración" ForeColor="#CCCCCC" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="Large"></asp:Label>
+         <asp:Label ID="Label2" runat="server" Text="Fecha de elaboración" ForeColor="#CCCCCC" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="15pt"></asp:Label>
          </p>
     <p> 
         <input type="date" id="fecha" runat="server" name="Fecha de elaboración" required="required"/> 
@@ -68,7 +68,7 @@
     <p>
 
         
-        <asp:Label ID="Label3" runat="server" Text="Nombre de la petición" ForeColor="#CCCCCC" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label3" runat="server" Text="Nombre de la petición" ForeColor="#CCCCCC" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="15pt"></asp:Label>
         
     </p>
     <p>
@@ -93,7 +93,7 @@
     <p>
 
         
-        <asp:Label ID="Label4" runat="server" Text="Descripción del servicio solicitado o falla a reparar" ForeColor="#CCCCCC" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label4" runat="server" Text="Descripción del servicio solicitado o falla a reparar" ForeColor="#CCCCCC" Font-Bold="True" Font-Names="Arial Narrow" Font-Size="15pt"></asp:Label>
           </p>
         
         <p> <textarea id="TextArea1" name="S1" runat="server" autofocus="autofocus" required="required" spellcheck="true"></textarea></p>
